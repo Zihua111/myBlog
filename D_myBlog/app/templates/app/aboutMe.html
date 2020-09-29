@@ -1,0 +1,93 @@
+﻿
+{#关于Zihua#}
+{#小萌新请指教#}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 /">
+    <title>Zihua-之华博客</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/maincss.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/animate.min.css' %}" />
+    <link rel="icon" href="{% static 'app/imgs/favicon.ico' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'app/imgs/favicon.ico' %}" type="image/x-icon" />
+    <script src="{% static 'app/scripts/jquery-3.5.1.js' %}" type="text/javascript"></script>
+    <script src="{% static 'app/scripts/snow.js' %}" type="text/javascript"></script>
+    <script src="{% static 'app/scripts/rain.js' %}" type="text/javascript"></script>
+    <script src="{% static 'app/scripts/Picture.js' %}" type="text/javascript"></script>
+    <script src="{% static 'app/scripts/vue.js' %}"></script>
+    <script src="{% static 'app/scripts/particle.js' %}" type="text/javascript" defer></script>
+    <script src="{% static 'app/scripts/mainjs.js' %}" type="text/javascript" defer></script>
+</head>
+<body>
+    {#头部分#}
+    <div id="head">
+        <div class="title"><a href="javascript:history.go(0);">之华的博客</a></div> {#刷新页面#}
+        <div class="div_mid">
+            <div><a href="{% url 'home' %}">Home</a></div>
+            <div><a href="{% url 'myCollection' %}">My Collection</a></div>
+            <div><a href="{% url 'aboutMe' %}">About Me</a></div>
+        </div>
+        <div class="searchDiv"><input class="search" type="search" name="search" /><div class="searchIcon"></div></div>
+    </div>
+    {#主体部分#}
+    <div id="main_part">
+        <div class="img1"></div>
+        <div class="img1_top"></div>
+        <div id="body_title" class="animated tada">关于Zihua</div>
+        <div class="body_span animated tada" style="font-size:15px;font-weight:normal;top: 320px;">——小萌新请指教</div>
+        <div id="body"> 
+            <div class="intro animated fadeInDown">
+                <span>Zihua自述</span>
+                <br />
+                <hr style="width:200px;border-bottom:none;border-color:antiquewhite;margin-top:10px;margin-bottom:30px;" />
+                <ul style="font-size:16px;font-weight:normal;">
+                    <li>首先Zihua要介绍一下自己的名字</li>
+                    <li>它的源头是一个叫做Zihuatanejo的墨西哥南部的一个城市，译意是没有回忆的海</li>
+                    <li>没有回忆就没有痛苦，在我的的心中，那是一片净土</li>
+                    <li>起初知道这个地方还是在《肖申克的救赎》里</li>
+                    <li style="margin-bottom:30px;">看了很多很多遍，每每遇到挫折、失落，它就像我的精神支柱一样推着我向前...</li>
+                    <li>我是2000年生人，目前刚刚步入大二，专业是自动化，我蛮喜欢的</li>
+                    <li style="margin-bottom:30px;">日常的爱好就是写写代码，打打乒乓什么的，偶尔也玩玩游戏，折折纸花...</li>
+                    <li>其实我发现自己喜欢写代码也是不久前的事情</li>
+                    <li>当时父亲为了给单位里省些钱，就自己写了一个B/S架构的企业管理系统(小型)</li>
+                    <li>那时候看他每天到深夜，真的有些心痛</li>
+                    <li>但我也被震撼了，他原本几乎没有任何基础，但却短短数月写成了</li>
+                    <li style="margin-bottom:30px;">可能是因为耳濡目染，我也爱上了写代码，放不下的那种...</li>
+                    <li>起初学习了C++，系统学了一遍之后开始了我代码生涯中的第一次实践——</li>
+                    <li>——写一个C/S架构的企业管理系统并结合到我父亲的系统上</li>
+                    <li>我用Qt快写完了，但是因为要开学就暂时搁置了，估计会在下个寒假投入使用</li>
+                    <li>在这期间，还学习了web前端的一些知识(jQ、Vue)，了解了下django</li>
+                    <li style="margin-bottom:30px;">感觉又打开了一个新世界的大门...</li>
+                    <li>萌生写个人博客的念头，也是有一次偶然地看到了一篇很好看的博客</li>
+                    <li>心生羡慕，于是就照猫画虎式地做了起来</li>
+                    <li>博客还有很多不足的地方，但不喜勿喷...</li>
+                    <li style="margin-bottom:60px;">希望我们能共同成长...</li>
+                    <li style="font-size:14px;margin-bottom:5px;margin-left: 0px;text-align:center;">结局不一定好看</li>
+                    <li style="font-size:14px;margin-bottom:5px;margin-left: 0px;text-align:center;">但过程一定要精彩啊</li>
+                    <li style="font-size:14px;margin-left: 0px;text-align:center;">——致心怀梦想的人 (2020.9.20 记)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {#尾部#}
+    <div id="set_content">
+        <h2>今日天气</h2>
+        <div id="weather_img" class="weather_img"></div>
+        <div id="weather_name"></div>
+        <div id="right_btn" class="weather_btn"></div>
+        <div id="left_btn" class="weather_btn"></div>
+        <div class="close_btn"></div>
+        <div class="tip">温馨提示:<br />本站天气将由您来决定......</div>
+    </div>
+    <div id="foot">
+        <ul>
+            <li>&copy; DESIGNED BY 之华&nbsp;&nbsp;&nbsp;</li>
+            <li id="time">已运行 0 天 00 时 00 分 00 秒</li>
+        </ul>
+        <div id="set"></div>
+    </div>
+</body>
+</html>
+

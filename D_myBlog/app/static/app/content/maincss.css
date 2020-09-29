@@ -1,0 +1,351 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: rgb(220, 220, 220);
+    text-decoration: none;
+}
+
+body {
+    /*    height: 1600px;*/
+}
+
+/*head*/
+#head {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+}
+
+    #head > div:not(.div_mid) {
+        float: left;
+        line-height: 60px;
+        margin-right: 20px;
+    }
+
+    #head a {
+        color: rgb(220, 220, 220);
+        transition: color 0.2s;
+        display: block;
+    }
+
+        #head a:hover {
+            color: white;
+        }
+
+.div_mid {
+    display: inline-block;
+}
+
+    .div_mid > div {
+        float: left;
+        line-height: 60px;
+        margin-right: 20px;
+    }
+
+.title {
+    position: absolute;
+    margin-left: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: YouYuan;
+}
+
+.searchDiv {
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+.searchIcon {
+    float: left;
+    margin-top: 15px;
+    width: 40px;
+    height: 28px;
+    line-height: 28px;
+    text-align: right;
+    border: 1px solid rgb(220, 220, 220);
+    border-left: none;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    cursor: pointer;
+    background: url("/static/app/imgs/search.png") no-repeat center;
+    background-size: 40% 50%;
+}
+
+#head input {
+    float: left;
+    margin-top: 15px;
+    height: 30px;
+    width: 70px;
+    transition: width 0.5s;
+    background: transparent;
+    border: 1px solid rgb(220, 220, 220);
+    border-right: none;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    color: rgb(220, 220, 220);
+    font-size: 14px;
+}
+
+    #head input::-ms-clear {
+        display: none;
+    }
+
+    #head input::-webkit-search-cancel-button {
+        display: none;
+    }
+
+    #head input:focus {
+        width: 150px;
+        transition: width 0.5s;
+        outline: none;
+        box-sizing: border-box;
+        padding-left: 5px;
+    }
+
+/*main_part*/
+#main_part {
+    height: 100%;
+    background: rgb(30,30,30);
+}
+
+.img1 {
+    height: 360px;
+    width: 100%;
+    background: url("/static/app/imgs/bgd.jpg") center/100% 800px no-repeat;
+    z-index: -1;
+}
+
+.img1_top {
+    float: left;
+    height: 360px;
+    width: 100%;
+    position: relative;
+    top: -360px;
+    background: linear-gradient(to bottom, rgba(30,30,30,0), rgba(30,30,30,1));
+}
+
+#body {
+    width: 100%;
+    position: absolute;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgb(30,30,30);
+}
+
+#body_title, .body_span {
+    height: 40px;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 220px;
+    text-align: center;
+    font-family: YouYuan;
+    font-weight: bold;
+    font-size: 5em;
+}
+
+.intro {
+    width: 600px;
+    font-family: YouYuan;
+    font-weight: bold;
+    font-size: 2em;
+    display: inline-block;
+    text-align: left;
+}
+
+    .intro ul > li {
+        margin-bottom: 10px;
+        margin-left: 20px;
+        color: rgb(220,220,220);
+        transition: color 0.5s;
+    }
+
+        .intro ul > li:hover {
+            color: white;
+            transition: color 0.5s;
+        }
+
+#section {
+    width: 40%;
+    display: inline-block;
+}
+
+.inner_section {
+    box-sizing: border-box;
+    padding: 12px;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 26px;
+    border: 1px solid rgb(220,220,220);
+    border-radius: 20px;
+    word-break: break-all;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+}
+
+    .inner_section:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url('/static/app/imgs/arrow.png') center/100% 100% no-repeat;
+    cursor: pointer;
+}
+
+    .arrow:hover {
+        background: url('/static/app/imgs/arrow_red.png') center/100% 100% no-repeat;
+    }
+
+/*foot*/
+#foot {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0,0,0,0.7);
+    color: rgb(220,220,220);
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+    #foot ul {
+        display: inline-block;
+    }
+
+    #foot li {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+
+#set {
+    float: right;
+    height: 20px;
+    width: 20px;
+    background: url('/static/app/imgs/weather.png') center/100% 100% no-repeat;
+    margin-right: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#set_content > h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(220,220,220);
+    font-family: yuweif,yuweij,YouYuan;
+}
+
+#set_content {
+    height: 250px;
+    width: 180px;
+    background-color: rgba(255,255,255,0.01);
+    position: fixed;
+    right: 2px;
+    bottom: 40px;
+    border-radius: 10px;
+    border-bottom: none;
+    display: none;
+}
+
+.tip {
+    margin-left: 20px;
+    margin-top: 140px;
+    font-size: 10px;
+    color: rgb(220,220,220);
+    font-family: YouYuan;
+    font-weight: bold;
+}
+
+.weather_img {
+    float: left;
+    margin-top: 40px;
+    margin-left: 50px;
+    height: 80px;
+    width: 80px;
+}
+
+    .weather_img:not(:first-of-type) {
+        margin-left: 10px;
+    }
+
+#weather_name {
+    float: left;
+    font-size: 16px;
+    color: rgb(220,220,220);
+    font-family: YouYuan;
+    font-weight: bolder;
+    position: relative;
+    right: 50px;
+    bottom: -10px;
+}
+
+.weather_btn {
+    float: left;
+    height: 40px;
+    width: 20px;
+    background: url("/static/app/imgs/left.png") no-repeat center/100% 50%;
+    cursor: pointer;
+}
+
+#right_btn {
+    position: relative;
+    right: 5px;
+    bottom: -55px;
+    transform: rotate(180deg);
+}
+
+#left_btn {
+    position: relative;
+    right: 115px;
+    bottom: -15px;
+}
+
+.weather_btn:hover {
+    background: url("/static/app/imgs/left_red.png") no-repeat center/100% 50%;
+}
+
+.close_btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    float: left;
+    background: url("/static/app/imgs/close_white.png") no-repeat center/100% 100%;
+    right: -5px;
+    top: -110px;
+    border-radius: 10px;
+    display: none; /*Òþ²Øclose_btn*/
+}
+
+    .close_btn:hover {
+        background: rgba(255,0,0,0.4) url("/static/app/imgs/close_red.png") no-repeat center/100% 100%;
+    }
+
+#comment {
+    height: 200px;
+    width: 60%;
+    display: inline-block;
+    background: red;
+}
